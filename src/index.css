@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translate(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.animate-fade-in{
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-fade-in-delay{
+    animation: fadeIn 1s ease-out 0.5s;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  
+  .animate-slideIn {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  @keyframes float {
+    0%{transform:translate(0px);}
+    50%{transform:translate(-10px);}
+    100%{transform:translate(0px);}
+    
+  }
+
+  .hover-float:hover{
+    animation: float 2s ease-in-out infinite;
+  }
